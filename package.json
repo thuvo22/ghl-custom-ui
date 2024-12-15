@@ -1,14 +1,15 @@
 {
     "name": "ghl-package",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "description": "A simple npm package with JavaScript and CSS",
     "main": "index.js",
     "files": [
-      "demo.js",
-      "styles.css"
+        "demo.js",
+        "styles.css"
     ],
-    "keywords": ["npm"],
+    "keywords": [
+        "npm"
+    ],
     "author": "TV",
     "license": "MIT"
-  }
-  
+}
