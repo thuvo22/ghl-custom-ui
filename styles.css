@@ -1070,10 +1070,10 @@ background-color:#3498db;
  margin-top:86px !important;
 }
 /* Contact details */
-#contact-details{
+/* #contact-details{
  padding-top:68px !important;
  transform:translatex(0px) translatey(0px);
-}
+} */
 /* Flex col reverse */
 #central-panel-wrapper .transition-all .flex-col-reverse{
  min-height:2669px;
