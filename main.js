@@ -1,3 +1,5 @@
+console.log("WHATUPPPPPPPPP");
+
 document.addEventListener("DOMContentLoaded", () => {
     console.log("DOM fully loaded and parsed");
     let svgTagValue = `<svg height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
