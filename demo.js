@@ -444,9 +444,9 @@ function tryAddButtonAbove(selector, retries = 3) {
     let containerElement = document.querySelector(selector);
 
     if (containerElement) {
-        //addSlidingButtonAboveElement(selector);
+        addSlidingButtonAboveElement(selector);
         //addButtonAboveElement(selector);
-        addButtonAddTagAboveElement(selector);
+        //addButtonAddTagAboveElement(selector);
     } else {
         console.warn(`Attempt failed. Retrying in 4000ms. Retries left: ${retries - 1}`);
         setTimeout(() => {
