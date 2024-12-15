@@ -127,103 +127,96 @@ function waitForDropdown(selector, callback) {
 }
 // Function to create and add a button on top of a target element
 function addButtonAddTagAboveElement(containerSelector) {
-    let svgFilePath = 'addTag.svg';
-    // Fetch the SVG content from the local file
-    fetch(svgFilePath)
-        .then((response) => {
-            if (!response.ok) {
-                throw new Error(`Failed to load SVG file: ${response.statusText}`);
-            }
-            return response.text();
-        })
-        .then((svgContent) => {
+    //console.log("Attempting to add button!");
 
-            let containerElement = document.querySelector(containerSelector);
+    let containerElement = document.querySelector(containerSelector);
 
-            if (containerElement) {
-                // Check if the button already exists
-                let existingButton = containerElement.parentNode.querySelector('.custom-button-add-tag');
-                if (!existingButton) {
-                    // Create a new button element if it doesn't exist
-                    let newButton = document.createElement('button');
-                    newButton.innerHTML = svgTagValue; // Add SVG icon before the text
-                    newButton.className = 'custom-button-add-tag'; // Add the custom class
+    if (containerElement) {
+        // Check if the button already exists
+        let existingButton = containerElement.parentNode.querySelector('.custom-button-add-tag');
+        if (!existingButton) {
+            // Create a new button element if it doesn't exist
+            let newButton = document.createElement('button');
+            newButton.innerHTML = `
+            <img src="https://storage.googleapis.com/msgsndr/UEW8ayn3dNsZG78pPsZw/media/675b8ee3299a3dd3d1006a2b.png" 
+                 alt="Rocket" 
+                 class="rocket-icon" 
+                 style="width: 24px; height: 24px; display: inline-block;">
+            <strong>Dispo Master</strong>
+        `; // Add SVG icon before the text
+            newButton.className = 'custom-button-add-tag'; // Add the custom class
 
-                    // Add the click event listener to open the popup
-                    newButton.addEventListener('click', function () {
-                        // Add text to the input field
-                        let inputField = document.querySelector('.tag-input .relative input[type=text]');
-                        let dropdown = document.querySelector('.hl_contact-details-left .tag-group .tag-options');
+            // Add the click event listener to open the popup
+            newButton.addEventListener('click', function () {
+                // Add text to the input field
+                let inputField = document.querySelector('.tag-input .relative input[type=text]');
+                let dropdown = document.querySelector('.hl_contact-details-left .tag-group .tag-options');
 
-                        if (inputField) {
-                            inputField.focus();
-                            console.log("inputField:  ", inputField);
-                            setTimeout(() => {
-                                const tagText = "Whateverrrrr";
-                                inputField.value = tagText;
-                                console.log("Input value set to:", inputField.value);
-                                let inputEvent = new Event('input', { bubbles: true, cancelable: true });
-                                inputField.dispatchEvent(inputEvent);
+                if (inputField) {
+                    inputField.focus();
+                    console.log("inputField:  ", inputField);
+                    setTimeout(() => {
+                        const tagText = "Whateverrrrr";
+                        inputField.value = tagText;
+                        console.log("Input value set to:", inputField.value);
+                        let inputEvent = new Event('input', { bubbles: true, cancelable: true });
+                        inputField.dispatchEvent(inputEvent);
 
-                                // Dispatch a 'keyup' event for the last character
-                                let keyupEvent = new KeyboardEvent('keyup', {
-                                    key: 'r', // Example: Last character of the input
-                                    keyCode: 'r'.charCodeAt(0),
-                                    code: 'KeyR',
-                                    bubbles: true,
-                                    cancelable: true,
-                                });
-                                inputField.dispatchEvent(keyupEvent);
-                                // Ensure dropdown is visible
-                                let waitForDropdown = setInterval(() => {
-                                    let dropdown = document.querySelector('.hl_contact-details-left .tag-group .tag-options');
-                                    if (dropdown && getComputedStyle(dropdown).display !== 'none') {
-                                        clearInterval(waitForDropdown); // Stop checking
+                        // Dispatch a 'keyup' event for the last character
+                        let keyupEvent = new KeyboardEvent('keyup', {
+                            key: 'r', // Example: Last character of the input
+                            keyCode: 'r'.charCodeAt(0),
+                            code: 'KeyR',
+                            bubbles: true,
+                            cancelable: true,
+                        });
+                        inputField.dispatchEvent(keyupEvent);
+                        // Ensure dropdown is visible
+                        let waitForDropdown = setInterval(() => {
+                            let dropdown = document.querySelector('.hl_contact-details-left .tag-group .tag-options');
+                            if (dropdown && getComputedStyle(dropdown).display !== 'none') {
+                                clearInterval(waitForDropdown); // Stop checking
 
-                                        console.log("Dropdown is visible. Attempting to click .add-new a...");
+                                console.log("Dropdown is visible. Attempting to click .add-new a...");
 
-                                        let addNewLink = dropdown.querySelector('.add-new a');
-                                        if (addNewLink) {
-                                            addNewLink.click(); // Simulate clicking the link
-                                            console.log("Clicked on .add-new a:", addNewLink.textContent);
-                                        } else {
-                                            console.error(".add-new a link not found in the dropdown.");
-                                        }
-                                    } else {
-                                        console.log("Waiting for dropdown to appear...");
-                                    }
-                                }, 100); // Check every 100ms
-                                console.log("Dropdown logic triggered programmatically.");
-                                // Dispatch the 'keydown' event for Enter
-                                let enterEvent = new KeyboardEvent('keydown', {
-                                    key: "Enter",
-                                    keyCode: 13,
-                                    code: "Enter",
-                                    bubbles: true,
-                                    cancelable: true,
-                                });
-                                inputField.dispatchEvent(enterEvent);
+                                let addNewLink = dropdown.querySelector('.add-new a');
+                                if (addNewLink) {
+                                    addNewLink.click(); // Simulate clicking the link
+                                    console.log("Clicked on .add-new a:", addNewLink.textContent);
+                                } else {
+                                    console.error(".add-new a link not found in the dropdown.");
+                                }
+                            } else {
+                                console.log("Waiting for dropdown to appear...");
+                            }
+                        }, 100); // Check every 100ms
+                        console.log("Dropdown logic triggered programmatically.");
+                        // Dispatch the 'keydown' event for Enter
+                        let enterEvent = new KeyboardEvent('keydown', {
+                            key: "Enter",
+                            keyCode: 13,
+                            code: "Enter",
+                            bubbles: true,
+                            cancelable: true,
+                        });
+                        inputField.dispatchEvent(enterEvent);
 
-                                console.log(`Simulated tag addition: "${tagText}"`);
-                            }, 100); // Adjust delay as needed
-                        } else {
-                            console.error("Input field not found!");
-                        }
-                    });
-
-                    // Insert the button as the previous sibling of the container element
-                    containerElement.parentNode.insertBefore(newButton, containerElement);
-                    console.log("Button added successfully!");
+                        console.log(`Simulated tag addition: "${tagText}"`);
+                    }, 100); // Adjust delay as needed
                 } else {
-                    //console.log("Button already exists, not adding another.");
+                    console.error("Input field not found!");
                 }
-            } else {
-                console.error("Element with selector " + containerSelector + " not found.");
-            }
-        })
-        .catch((error) => {
-            console.error("Error loading SVG file:", error);
-        });
+            });
+
+            // Insert the button as the previous sibling of the container element
+            containerElement.parentNode.insertBefore(newButton, containerElement);
+            console.log("Button added successfully!");
+        } else {
+            //console.log("Button already exists, not adding another.");
+        }
+    } else {
+        console.error("Element with selector " + containerSelector + " not found.");
+    }
 }
 // Function to create and add a button on top of a target element
 function addButtonAboveElement(containerSelector) {
