@@ -127,7 +127,7 @@ function waitForDropdown(selector, callback) {
 }
 // Function to create and add a button on top of a target element
 function addButtonAddTagAboveElement(containerSelector) {
-    //console.log("Attempting to add button!");
+    console.log("Attempting to add addButtonAddTagAboveElement!");
 
     let containerElement = document.querySelector(containerSelector);
 
@@ -142,7 +142,7 @@ function addButtonAddTagAboveElement(containerSelector) {
                  alt="Rocket" 
                  class="rocket-icon" 
                  style="width: 24px; height: 24px; display: inline-block;">
-            <strong>Dispo Master</strong>
+            <strong>Add Tag</strong>
         `; // Add SVG icon before the text
             newButton.className = 'custom-button-add-tag'; // Add the custom class
 
