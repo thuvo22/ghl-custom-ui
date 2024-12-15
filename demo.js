@@ -444,7 +444,7 @@ function tryAddButtonAbove(selector, retries = 3) {
     let containerElement = document.querySelector(selector);
 
     if (containerElement) {
-        //addSlidingButtonAboveElement(selector);
+        addSlidingButtonAboveElement(selector);
         //addButtonAboveElement(selector);
         //addButtonAddTagAboveElement(selector);
     } else {
