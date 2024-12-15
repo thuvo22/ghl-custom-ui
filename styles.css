@@ -1134,9 +1134,9 @@ background-color:#3498db;
  transform:translatex(0px) translatey(0px);
 }
 /* Container fluid */
-/* #agency_location .container-fluid{
+#agency_location .container-fluid{
  margin-top:70px;
-} */
+}
 /* Title */
 #account-snapshots div .title{
  color:#000000 !important;
@@ -1149,6 +1149,9 @@ background-color:#3498db;
 #agencyCustomMenuLinkSettingsPage iframe{
  margin-top:36px;
 }
+
+
+
 
 /* Text medium */
 .n-data-table-tbody div .hl-text-sm-medium{
