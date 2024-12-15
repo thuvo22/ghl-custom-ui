@@ -1036,48 +1036,48 @@ background-color:#3498db;
 }
 
 /* Central panel */
-/* #central-panel{
+#central-panel{
  background-color:#9595e3;
  transform:translatex(0px) translatey(0px);
  background-size:auto;
  background-image:linear-gradient(to right, #2bc0e4 0%, #eaecc6 100%);
-} */
+}
 
 /* Flex col reverse */
-/* #central-panel-wrapper .transition-all .flex-col-reverse{
+#central-panel-wrapper .transition-all .flex-col-reverse{
  padding-top:0px;
  position:relative;
  top:-2px;
-} */
+}
 
 /* Central panel header */
-/* #central-panel-header{
+#central-panel-header{
  padding-top:14px !important;
  min-height:81px;
  padding-bottom:31px !important;
  margin-bottom:0px !important;
  height:81px;
-} */
+}
 /* Division */
-/* #central-panel .update-styling-for-new-right-panel{
+#central-panel .update-styling-for-new-right-panel{
  padding-top:0px;
  padding-bottom:0px;
  transform:translatex(0px) translatey(0px);
-} */
+}
 
 /* Division */
-/* #conversations .hl_conversations--wrap div .hl_conversations--message #central-panel #central-panel .update-styling-for-new-right-panel{
+#conversations .hl_conversations--wrap div .hl_conversations--message #central-panel #central-panel .update-styling-for-new-right-panel{
  margin-top:86px !important;
-} */
+}
 /* Contact details */
-/* #contact-details{
+#contact-details{
  padding-top:68px !important;
  transform:translatex(0px) translatey(0px);
-} */
+}
 /* Flex col reverse */
-/* #central-panel-wrapper .transition-all .flex-col-reverse{
+#central-panel-wrapper .transition-all .flex-col-reverse{
  min-height:2669px;
-} */
+}
 
 /* Central panel header */
 #central-panel-header{
@@ -1092,9 +1092,9 @@ background-color:#3498db;
 }
 
 /* Heading */
-/* #central-panel-header h2{
+#central-panel-header h2{
  margin-top:48px;
-} */
+}
 /* Iframe */
 .hl_wrapper .custom-link iframe{
  margin-top:41px;
@@ -1110,10 +1110,10 @@ background-color:#3498db;
 }
 
 /* Title container */
-/* .hl-header .hl-title-container{
+.hl-header .hl-title-container{
  color:#020202;
  transform:translatex(0px) translatey(0px);
-} */
+}
 
 /* Title */
 #platform-billing .hl-wrapper-container .n-config-provider .agency-billing div .hl-header .hl-header-content .hl-title-container .title{
@@ -1134,9 +1134,9 @@ background-color:#3498db;
  transform:translatex(0px) translatey(0px);
 }
 /* Container fluid */
-/* #agency_location .container-fluid{
+#agency_location .container-fluid{
  margin-top:70px;
-} */
+}
 /* Title */
 #account-snapshots div .title{
  color:#000000 !important;
@@ -1149,7 +1149,6 @@ background-color:#3498db;
 #agencyCustomMenuLinkSettingsPage iframe{
  margin-top:36px;
 }
-
 
 /* Text medium */
 .n-data-table-tbody div .hl-text-sm-medium{
