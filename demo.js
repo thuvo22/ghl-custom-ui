@@ -458,12 +458,12 @@ function tryAddButtonAbove(selector, retries = 3) {
 // Use the correct query selector for the div where the button will be placed above
 let containerSelector = '#contact-details';
 let convoSelector = '#central-panel-header';
-
+let contact_justify_center = '.hl_conversations--message .hl_conversations--message-header-new .justify-between';
 // Check if #contact-details exists
 setInterval(() => {
     if (document.querySelector(containerSelector)) {
         //console.log("IN CONTACT LINK");
-        tryAddButtonAbove(containerSelector, 6);
+        tryAddButtonAbove(contact_justify_center, 6);
     } else {
         // Check if #central-panel-header exists
         //console.log("IN CONVO LINK");

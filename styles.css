@@ -167,7 +167,7 @@
  /*background-image:linear-gradient(to right, rgb(64, 224, 208) 0%, rgb(255, 140, 0) 33%, rgb(255, 0, 128) 100%);*/
  padding-top:6px !important;
  padding-left:0px;
- padding-top:67px;
+ /* padding-top:67px; */
 }
 
 #smartlists .hl_controls{
@@ -176,14 +176,14 @@
 /* Message input wrap */
 #center-panel .message-input-wrap{
  padding-top:0px;
- margin-top:-50px;
+ /* margin-top:-50px; */
 }
 
 /* Flex col reverse */
 #central-panel-wrapper .transition-all .flex-col-reverse{
  padding-bottom:0px;
- margin-bottom:-50px !important;
- margin-top:-50px;
+ /* margin-bottom:-50px !important; */
+ /* margin-top:-50px; */
  padding-top:0px;
 }
 /* Flex col reverse */
